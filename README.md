@@ -18,7 +18,7 @@ To install and run this project locally, follow these simple steps:
    ```
 2. **Navigate to the project folder:**
    ```sh
-   cd MyFamilyWebsite
+   cd capstoneProject
    ```
 3. **Open the `index.html` file in your browser:**
    - Double-click the file to open it.
