@@ -14,7 +14,7 @@ To install and run this project locally, follow these simple steps:
 
 1. **Clone the repository:**
    ```sh
-   git clone https://github.com/your-username/MyFamilyWebsite.git
+   git clone https://github.com/Tezvdwalt/capstoneProject.git
    ```
 2. **Navigate to the project folder:**
    ```sh
