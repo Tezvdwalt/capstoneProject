@@ -1,0 +1,316 @@
+/*** 🔥 GENERAL PAGE STYLING 🔥 ***/
+body {
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(to right, #ffefba, #ffffff);
+  padding-top: 100px; // Ensures content starts below the fixed navbar
+}
+
+/*** 🔥 BUTTONS HOVER EFFECT 🔥 ***/
+button {
+  padding: 8px 12px;
+  margin: 5px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  transition: background 0.3s ease, transform 0.2s ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.save_btn {
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+  color: white;
+}
+
+.save_btn:hover {
+  background: linear-gradient(to right, #ff4b2b, #ff416c);
+}
+
+.like_btn {
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  color: white;
+}
+
+.like_btn:hover {
+  background: linear-gradient(to right, #00f2fe, #4facfe);
+}
+
+.love_btn {
+  background: linear-gradient(to right, #ff758c, #ff7eb3);
+  color: white;
+}
+
+.love_btn:hover {
+  background: linear-gradient(to right, #ff7eb3, #ff758c);
+}
+
+/*** 🔥 CENTERING HEADERS WITH FLICKERING EFFECTS 🔥 ***/
+h1 {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  color: #ff416c;
+  animation: neonFlicker 1.5s infinite alternate;
+  position: relative;
+  z-index: 1000;
+}
+
+h2 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+/*** 🔥 NEON FLICKER EFFECT FOR h1 🔥 ***/
+@keyframes neonFlicker {
+  0% {
+    text-shadow: 0px 0px 10px #ff4b2b;
+  }
+  25% {
+    text-shadow: 0px 0px 15px #ff416c;
+  }
+  50% {
+    text-shadow: 0px 0px 5px #ff4b2b;
+  }
+  75% {
+    text-shadow: 0px 0px 20px #ff416c;
+  }
+  100% {
+    text-shadow: 0px 0px 10px #ff4b2b;
+  }
+}
+
+/*** 🔥 GLITCH EFFECT FOR h2 🔥 ***/
+@keyframes glitch {
+  0% {
+    transform: translateX(0);
+    text-shadow: 2px 2px 10px rgba(255, 0, 0, 0.5);
+  }
+  50% {
+    transform: translateX(-2px);
+    text-shadow: -2px -2px 5px rgba(0, 255, 0, 0.5);
+  }
+  100% {
+    transform: translateX(2px);
+    text-shadow: 2px 2px 5px rgba(0, 0, 255, 0.5);
+  }
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(to right, #00c9ff, #92fe9d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glitch 0.2s infinite;
+}
+
+/*** 🔥 SPARKLING h3 EFFECT 🔥 ***/
+@keyframes sparkle {
+  0% {
+    text-shadow: 0px 0px 5px #f9d423;
+  }
+  50% {
+    text-shadow: 0px 0px 10px #ff4b2b, 0px 0px 20px #ff416c;
+  }
+  100% {
+    text-shadow: 0px 0px 5px #f9d423;
+  }
+}
+
+h3 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  animation: sparkle 1.5s infinite alternate;
+}
+
+/*** 🔥 NAVIGATION STYLING 🔥 ***/
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  padding: 15px 0;
+  z-index: 1000;
+  transition: background 0.3s ease-in-out;
+}
+
+nav:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav li {
+  margin: 0 20px;
+  position: relative;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: #070707;
+  padding: 10px 15px;
+  transition: color 0.3s ease-in-out;
+  position: relative;
+}
+
+/*** 🔥 UNDERLINE HOVER EFFECT 🔥 ***/
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+nav a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+nav a:hover {
+  color: #ff416c;
+  text-shadow: 0px 0px 10px rgba(255, 65, 108, 0.8);
+}
+
+/*** 🔥 CONTACT US FORM STYLING 🔥 ***/
+#contact {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#contactUsForm input,
+#contactUsForm textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+#contactUsForm input:focus,
+#contactUsForm textarea:focus {
+  outline: none;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#contactUsForm textarea {
+  resize: none;
+  min-height: 120px;
+}
+
+#contactUsForm button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, background 0.3s ease-in-out;
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+  color: white;
+}
+
+#contactUsForm button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to right, #ff4b2b, #ff416c);
+}
+
+/*** 🔥 CENTERING CHILD SECTIONS 🔥 ***/
+.child-section {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.child-section:hover {
+  transform: scale(1.02);
+}
+
+/*** 🔥 IMAGE HOVER EFFECT 🔥 ***/
+.child-section img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+.child-section img:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/*** 🔥 COMMENT FORM IMPROVEMENTS 🔥 ***/
+.commentForm {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin-top: 10px;
+}
+
+.commentForm textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  resize: none;
+}
+
+.commentForm button {
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 5px;
+  transition: background 0.3s ease;
+}
+
+.commentForm button:hover {
+  background: linear-gradient(to right, #ff4b2b, #ff416c);
+  transform: scale(1.05);
+}
